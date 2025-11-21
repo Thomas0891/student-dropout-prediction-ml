@@ -122,8 +122,7 @@ Explore data with:
 ### **4. SHAP Explainability**
 Understand **why** the prediction was made.
 
-### **5. PDF Report Generation**
-Download a complete student prediction report.
+
 
 ---
 
