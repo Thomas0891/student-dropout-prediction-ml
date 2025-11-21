@@ -1,0 +1,11 @@
+Age,Mother_Education,Father_Education,Number_of_Absences,Grade_1,Grade_2,Final_Grade,Grade_Avg,High_Absence,Total_Alcohol,School,Gender,Address,Family_Size,Parental_Status,Mother_Job,Father_Job,Reason_for_Choosing_School
+14,1,2,1,3,14,0,8.5,0,4,MS,M,U,GT3,T,services,other,course
+19,0,1,4,15,2,4,8.5,0,9,GP,F,U,GT3,T,health,teacher,other
+13,1,1,13,3,10,10,6.5,1,8,GP,M,U,GT3,T,other,health,other
+17,2,0,11,6,2,11,4.0,1,8,GP,F,U,GT3,T,other,services,reputation
+14,4,1,14,7,7,14,7.0,1,4,GP,M,U,GT3,T,teacher,other,home
+14,4,1,14,16,10,14,13.0,1,5,MS,M,R,LE3,T,health,services,course
+14,4,1,14,8,9,17,8.5,1,2,GP,M,U,GT3,T,services,teacher,course
+16,1,4,11,19,18,16,18.5,1,9,MS,M,U,LE3,A,health,at_home,course
+21,1,0,10,13,11,1,12.0,1,7,MS,F,U,LE3,A,other,services,home
+13,3,2,27,6,15,14,10.5,1,2,MS,M,R,GT3,T,other,health,home
