@@ -1,209 +1,147 @@
-##🎓 Student Dropout Prediction System
-An End-to-End Machine Learning + Streamlit Dashboard Project
-
-
-
-
-
-
-
-
-
-
-
-
-##⭐ Overview
-
-This project builds a complete machine learning system to predict student dropout risk using academic, behavioral, and demographic data.
-
-The final Random Forest model achieves:
-
-🎯 99.23% Accuracy
-
-📈 1.0 ROC-AUC Score
-
-A beautiful, interactive Streamlit web application is included with:
-
-🔮 Real-time Predictions
-
-📦 Batch Prediction (CSV Upload)
-
-📊 EDA Dashboard
-
-🧠 Explainability (SHAP & LIME)
-
-📝 Professional PDF Report Generation
-
-##📂 Dataset
-
-Dataset used in the project:
-🔗 https://www.kaggle.com/datasets/abdullah0a/student-dropout-analysis-and-prediction-dataset
-
-The dataset contains information such as:
-
-Demographic details
-
-Academic performance
-
-Family background
-
-Alcohol consumption
-
-Attendance
-
-Personal habits
-
-All features were analyzed and refined to improve model performance.
-
-##🧠 Machine Learning Pipeline
-✔ Step 1: Data Collection
-
-Data loaded from Kaggle dataset
-
-Validated column types & formatting
-
-Handled missing values
-
-✔ Step 2: Data Preprocessing
-
-Includes:
-
-Encoding categorical variables
-
-Scaling numeric variables
-
-Handling missing entries
-
-Removing inconsistencies
-
-Outlier treatment
-
-✔ Step 3: Exploratory Data Analysis (EDA)
-
-Visualizations include:
-
-Count plots
-
-Histograms
-
-Boxplots
-
-Line & bar charts
-
-Correlation heatmap
-
-Clustered relationships
-
-Insights:
-
-High absences strongly correlate with dropout
-
-Low grades predict dropout risk
-
-Alcohol consumption affects grades
-
-Family status influences performance
-
-✔ Step 4: Feature Engineering
-Engineered Feature	Description
-Grade_Avg	Average of Grade_1 and Grade_2
-High_Absence	Flag for absences > 5
-Total_Alcohol	Weekend + weekday alcohol
-
-These features significantly improved the model.
-
-✔ Step 5: Model Training
-
-The following ML models were trained and compared:
-
-Logistic Regression
-
-KNN
-
-SVM
-
-Decision Tree
-
-Random Forest
-
-XGBoost (optional)
-
-Best Model:
-🔥 Random Forest Classifier
-
-✔ Step 6: Hyperparameter Tuning
-
-Best parameters (via GridSearchCV):
-
-{
-  "max_depth": 10,
-  "min_samples_split": 2,
-  "min_samples_leaf": 1,
-  "n_estimators": 200
-}
-
-
-##Final Performance:
-
-🎯 Accuracy: 0.9923
-
-📈 ROC-AUC: 1.0
-
-🎨 Streamlit Web Application
-
-The app includes:
-
-🧍 Single Student Prediction
-
-User inputs data → model predicts dropout risk + explanation.
-
-📦 Batch Prediction
-
-Upload CSV → predicts risk for all students.
-Output can be downloaded.
-
-📊 EDA Dashboard
-
-Grade trends
-
-Absence distribution
-
-Alcohol consumption charts
-
-Correlation heatmap
-
-Target distribution
-
-🧠 Explainability
-
-SHAP Summary Plot (global)
-
-LIME Explanation (local)
-
-📝 PDF Report (A4, Professional)
-
-Generated report includes:
-
-Student details
-
-Prediction & probability
-
-6 charts
-
-Recommendations
-
-SHAP/LIME explanation
-
-Professional formatting
-
-📁 Folder Structure
-Student_Dropout_Prediction/
-│
-├── app.py
-├── preprocessor.joblib
-├── final_model.joblib
-├── student_dropout.csv
-├── batch_template.csv
-├── sample_batch_students.csv
-├── requirements.txt
-└── README.md
+# 🎓 Student Dropout Prediction System  
+_A Machine Learning Web App for Early Dropout Detection_
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B)
+![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-yellow)
+![Accuracy](https://img.shields.io/badge/Accuracy-99.23%25-brightgreen)
+![ROC AUC](https://img.shields.io/badge/ROC--AUC-1.0-blueviolet)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+---
+
+## 📌 Project Overview
+The **Student Dropout Prediction System** is a fully built end-to-end machine learning solution designed to identify students at risk of dropping out.  
+The system uses academic, behavioural, demographic, and family-related attributes to predict dropout risk with **99.23% accuracy** and **1.0 ROC-AUC**.
+
+The project includes:
+- Machine Learning Model (Random Forest Tuned)
+- EDA Dashboard
+- SHAP Explainability
+- Batch Predictions
+- PDF Report Generation
+- Modern Streamlit UI
+
+---
+
+## 📥 Dataset Source (Kaggle)
+
+The dataset used in this project is from Kaggle:
+
+🔗 **Student Dropout Analysis & Prediction Dataset**  
+https://www.kaggle.com/datasets/abdullah0a/student-dropout-analysis-and-prediction-dataset
+
+---
+
+## 🧠 Objective
+To build a reliable AI system that predicts whether a student is likely to **Drop Out** or **Continue**, enabling early intervention and academic support.
+
+---
+
+## 🧩 Project Architecture
+
+        ┌────────────────┐
+        │   Dataset      │
+        └───────┬────────┘
+                │
+                ▼
+    ┌────────────────────────┐
+    │ Data Preprocessing     │
+    │ - Cleaning             │
+    │ - Encoding             │
+    │ - Feature Engineering  │
+    └─────────┬──────────────┘
+              │
+              ▼
+    ┌────────────────────────┐
+    │  Model Training        │
+    │  (RF, SVM, XGB, etc.)  │
+    └─────────┬──────────────┘
+              │
+              ▼
+  ┌──────────────────────────────┐
+  │ Tuned Random Forest Model    │
+  │ - Accuracy: 99.23%           │
+  │ - ROC AUC: 1.0               │
+  └─────────┬────────────────────┘
+            │
+            ▼
+ ┌─────────────────────────────┐
+ │   Streamlit Web App         │
+ │   - Single Prediction       │
+ │   - Batch CSV Prediction    │
+ │   - EDA Dashboard           │
+ │   - SHAP Explainability     │
+ │   - PDF Reports             │
+ └─────────────────────────────┘
+
+---
+
+## 📊 Model Performance
+
+| Model | Accuracy | ROC-AUC |
+|-------|----------|---------|
+| Logistic Regression | 92% | 0.94 |
+| Decision Tree | 93% | 0.95 |
+| SVM | 96% | 0.97 |
+| KNN | 94% | 0.95 |
+| XGBoost | 98% | 0.99 |
+| **Random Forest (Final Model)** | ⭐ **99.23%** | ⭐ **1.0** |
+
+---
+
+## 🔍 Feature Engineering
+
+Created new features:
+- `Grade_Avg`
+- `High_Absence`
+- `Total_Alcohol`
+
+Applied:
+- Scaling  
+- One-Hot Encoding  
+- Label Encoding  
+
+---
+
+## 🎛 Streamlit App Features
+
+### **1. Single Student Prediction**
+Predict dropout risk instantly.
+
+### **2. Batch CSV Prediction**
+Upload multiple students at once.
+
+### **3. EDA Dashboard**
+Explore data with:
+- Histograms
+- Heatmaps
+- Correlation maps
+- Distribution plots
+
+### **4. SHAP Explainability**
+Understand **why** the prediction was made.
+
+### **5. PDF Report Generation**
+Download a complete student prediction report.
+
+---
+
+## 🖥 How to Run Locally
+
+```bash
+git clone <your-repo-link>
+cd student-dropout-prediction
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run app.py
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
+matplotlib
+seaborn
+shap
+fpdf
